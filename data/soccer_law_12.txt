@@ -163,3 +163,265 @@ When reviewing frames from a video clip, the following visual cues are key:
 
 5. REACTION OF FOULED PLAYER: Does the reaction appear commensurate with the
    force of contact, or is it exaggerated (simulation)?
+The Missing Piece: The Actual Rulebook
+Anti Gravity will write the Python code to load the file, but it might just put placeholder text in soccer_law_12.txt. To make your AI incredibly smart, you need to give it the actual rules.
+
+Once Anti Gravity creates the data/soccer_law_12.txt file, open it and paste this condensed, highly-accurate version of IFAB Law 12 (Fouls and Misconduct):
+Comprehensive Analysis of the IFAB Laws of the Game: Regulatory Framework, Law 12 Specifications, and the 2025-2027 Evolutionary Cycle
+Introduction to the Global Regulatory Architecture
+The regulatory architecture of association football is exclusively governed by the International Football Association Board (IFAB), the independent guardian of the Laws of the Game. The laws are meticulously calibrated to balance the fluidity of the sport with player safety, sporting fairness, and the absolute authority of match officials. The modern era of football regulation is characterized by a concerted effort to optimize match flow, integrate technological advancements, and rigorously manage player behavior. This regulatory standardization dictates that the same fundamental legal framework applies in every match, across every confederation, country, town, and village, from grassroots fixtures to elite professional tournaments.   
+
+Deviations from this universal standard are strictly prohibited unless authorized through specific modifications permitted by IFAB. These permitted modifications are generally reserved for youth, veterans, disability, and grassroots football, encompassing variations in substitution limits, match duration, field dimensions, and specific safety rules such as the prohibition of deliberate heading in certain age brackets. For all measurements defined within the laws, if there is any divergence between metric and imperial units, the metric units are deemed authoritative and legally binding.   
+
+The 2025/2026 and upcoming 2026/2027 legislative cycles represent a profound philosophical shift in regulatory enforcement. The governing bodies have introduced sophisticated mechanisms to combat time-wasting, tactical delays, and dissent, thereby actively reshaping the tactical and behavioral landscape of the sport. This report serves as an exhaustive, definitive codification of the current rules of football, with a specialized, highly accurate focus on Law 12 (Fouls and Misconduct), designed to provide a complete understanding of the mechanics, sanctions, and protocols that dictate modern match play.   
+
+The Seventeen Pillars: Taxonomy and Structural Mechanics of the Laws
+The foundational structure of football is systematically divided into seventeen distinct laws, originally codified and subsequently refined over decades to address the evolving physical and technical complexities of the sport. These laws encompass the physical environment, the participants, the authority figures, the mechanics of play, and the parameters of infractions.   
+
+The Foundational Parameters (Laws 1 through 7)
+The physical and administrative parameters of the match are established within the first seven laws, ensuring a standardized environment prior to the commencement of play.
+
+Law Designation	Regulatory Scope	Recent Amendments and Operational Mechanics
+Law 1: The Field of Play	Physical environment parameters	
+Dictates the precise dimensions of the pitch, the necessity of safe surface requirements, specific line markings, goal specifications, and the spatial boundaries of the technical area.
+
+Law 2: The Ball	Equipment standardization	
+Regulates the size, weight, internal pressure, and material composition of the match ball, alongside the strict protocols required for ball replacement during a match.
+
+Law 3: The Players	Roster limits and substitution	
+Mandates a maximum of eleven players per team (one being the goalkeeper). Recent amendments permit up to five substitutions in standard play, and up to eight (extendable to eleven by mutual agreement) in senior 'A' international friendlies. Crucially, each team is now legally required to have a designated captain on the field wearing an identifying armband.
+
+Law 4: The Players' Equipment	Safety and technological wearables	
+Establishes mandatory baseline equipment (shirt, shorts, socks, shinguards, footwear). Modernizations now permit non-dangerous items to be worn if safely and securely covered, addressing wearable performance trackers and safety gear.
+
+Law 5: The Referee	Absolute match authority	
+Grants the referee total jurisdiction to enforce the laws, issue disciplinary cards, and act as the sole timekeeper. New provisions allow competitions to utilize referee body cameras (chest- or head-mounted) to deter abuse.
+
+Law 6: The Other Match Officials	Delegated match administration	
+Defines the operational purview of assistant referees, the fourth official, reserve assistant referees, and video match officials. In grassroots modifications, "club linesmen" may be utilized solely to indicate when the ball is out of play.
+
+Law 7: The Duration of the Match	Temporal regulation	
+Establishes the standard regulation time, the mandatory half-time interval, and the precise mathematical allowance for time lost to injuries, substitutions, and goal celebrations.
+
+  
+Law 3 represents a focal point of recent legislative updates. While the team captain historically possessed no special status or privileges under the laws, the new mandate requiring an identifying armband is intricately linked to match management and behavior protocols. Furthermore, IFAB has codified additional permanent concussion substitutions to protect player welfare, operating independently of the standard tactical substitution limits. In authorized youth modifications (such as U11-U12 matches), the maximum number of players may be reduced to nine, illustrating the scalability of the laws.   
+
+Law 5 empowers the referee with the authority to show yellow or red cards from the exact moment they enter the field of play for the pre-match inspection until after the match concludes, including half-time, extra time, and penalty shoot-outs. The referee is also responsible for executing specific visual signals, such as the "TV signal" for Video Assistant Referee reviews, the re-entry signal for players returning from injury treatment, and the newly mandated countdown signals for goalkeeper possession limits.   
+
+Play Mechanics and Restarts (Laws 8 through 11, and 13 through 17)
+The mechanics of starting, halting, and restarting play dictate the temporal rhythm and spatial dynamics of a match. These laws define the boundaries of active play and the precise methods by which the ball is reintroduced following an infraction or a natural stoppage.
+
+Law 8: The Start and Restart of Play
+Law 8 governs kick-offs and the dropped ball procedure. The dropped ball mechanic has been significantly fundamentally restructured to prevent the chaotic, injury-prone artificial contests of the past. The contemporary procedure is highly systematic. If play is stopped while the ball is inside the penalty area, or if the ball's last touch occurred within the penalty area, the ball is dropped exclusively for the defending team's goalkeeper.   
+
+If play is stopped while the ball is outside the penalty area, the referee drops the ball for one player of the team that possessed the ball, or would have clearly gained possession, at the exact position where play was stopped. To ensure unimpeded restarts, all other players from both teams must remain a minimum of 4 meters (4.5 yards) away from the ball until it makes contact with the ground. The ball officially enters play the moment it touches the ground; if it is played before grounding, the drop is retaken. A goal cannot be scored directly from a dropped ball; it must touch at least two separate players before entering the net.   
+
+Law 9: The Ball in and out of Play
+Law 9 delineates the binary states of active play and stoppage, primarily focusing on interference by outside agents. The ball remains in play at all times unless it has wholly crossed the goal line or touchline, or play has been explicitly stopped by the referee.   
+
+A crucial update addresses unintentional interference by non-active personnel. If a team official, substitute, substituted player, sent-off player, or a player temporarily off the field (for injury or equipment adjustment) touches a ball that is clearly in the process of leaving the field of play, and the referee judges there was no intent to unfairly interfere, the restart is an indirect free kick awarded to the opposition from the point of contact. Crucially, no disciplinary sanction (yellow or red card) is issued in these specific circumstances, recognizing the instinctive nature of stopping a ball destined for the touchline. However, if an outside agent, such as a spectator or an object thrown onto the field, interferes with play, the match is stopped, the object removed, and play restarts with a dropped ball.   
+
+Law 11: Offside
+Law 11 governs the offside rule, a fundamental tactical constraint designed to prevent "goal hanging" and encourage cohesive team movement. The rule is bifurcated into two elements: being in an offside position, and committing an offside offence.   
+
+A player is categorized as being in an offside position if any part of their head, body, or feet is situated in the opponents' half of the field and is nearer to the opponents' goal line than both the ball and the second-last opponent. For the purposes of this geometric determination, the hands and arms of all players, including goalkeepers, are strictly ignored. The upper boundary of the arm is legally defined as being in line with the bottom of the armpit.   
+
+Merely occupying an offside position is not an offence. An infraction only crystallizes if the player becomes involved in active play by interfering with the play (touching the ball), interfering with an opponent (clearly obstructing their line of vision or challenging for the ball), or gaining an advantage. Gaining an advantage is defined as playing a ball that has rebounded off a goalpost, crossbar, match official, or opponent, or playing a ball that has been deliberately saved. A "save" is specifically defined as an attempt to stop a ball going into or very close to the goal with any part of the body other than the hands/arms (unless it is the goalkeeper within their penalty area).   
+
+If an attacker in an offside position receives the ball from an opponent who deliberately played the ball, no offside offence has occurred. Deliberate play necessitates the player having control of the ball with the genuine possibility of passing, gaining possession, or clearing it, evaluated by criteria such as the ball traveling from a distance with a clear view and moving at a manageable speed.   
+
+To ensure technological and observational consistency, the point of contact used to evaluate offside positioning is the first point of contact when the ball is played by a teammate. However, a newly codified exception exists: when a goalkeeper throws the ball, the last point of contact upon the release of the throw is utilized as the exact reference point, providing a much clearer binary frame for match officials and Video Assistant Referees assessing rapid counter-attacks.   
+
+Laws 13 through 17: Standardized Restarts
+The remaining structural laws dictate the precise execution of dead-ball situations.
+
+Restart Law	Execution Protocol	Offence and Sanction Mechanisms
+Law 13: Free Kicks	
+The ball must be stationary. Opponents must remain at least 9.15 meters (10 yards) away. In authorized youth modifications, this distance may be reduced to 8 yards.
+
+If a player takes a free kick from the incorrect position to deliberately force a retake and waste time, they must be cautioned.
+
+Law 14: The Penalty Kick	
+Executed from the penalty mark. Only the kicker and the defending goalkeeper are permitted inside the penalty area prior to the kick.
+
+Recent clarifications ensure that an accidental "double touch" by the penalty taker results in an indirect free kick, updating previous ambiguities.
+
+Law 15: The Throw-in	
+Awarded when the ball entirely crosses the touchline. The thrower must face the field, have part of each foot on or behind the line, and use both hands to deliver the ball from behind and over the head.
+
+If an extra person (e.g., a substitute) interferes with the throw-in maliciously, disciplinary action is taken.
+
+Law 16: The Goal Kick	
+Awarded when the ball crosses the goal line, last touched by the attacking team. The ball must be stationary and kicked from anywhere within the goal area. The ball is in play once it clearly moves.
+
+Opponents must remain outside the penalty area. If the kicker touches the ball a second time before it touches another player, an indirect free kick is awarded.
+
+Law 17: The Corner Kick	
+Awarded when the ball crosses the goal line, last touched by the defending team. The ball is placed within the corner area.
+
+The kick must be taken from the corner area nearest to where the ball crossed the line, or nearest to the goalkeeper's position if penalizing an eight-second handling offence.
+
+  
+Exhaustive Specification of Law 12: Fouls and Misconduct
+Law 12 constitutes the primary judicial instrument for maintaining physical safety, tactical fairness, and sporting integrity. It categorically defines the rigid criteria for physical fouls, technical infractions, and behavioral misconduct, subsequently outlining the precise mechanisms for game restarts and the escalation of disciplinary sanctions. The following sections provide a highly accurate, condensed framework of Law 12 suitable for analytical modeling and definitive reference.   
+
+Direct Free Kick Infractions
+A direct free kick is awarded to the opposing team if a player commits any of a specific set of physical offences against an opponent in a manner evaluated by the referee to fall into one of three distinct thresholds of severity: careless, reckless, or using excessive force.   
+
+The physical actions that trigger this evaluation include:
+
+Charging an opponent.   
+
+Jumping at an opponent.   
+
+Kicking or attempting to kick an opponent.   
+
+Pushing an opponent.   
+
+Striking or attempting to strike (including the execution of a head-butt) an opponent.   
+
+Tackling or challenging an opponent.   
+
+Tripping or attempting to trip an opponent.   
+
+The legal definitions of the severity thresholds dictate the corresponding disciplinary sanction. Careless implies the player exhibited a lack of attention or consideration when initiating a challenge; this requires a direct free kick but necessitates no further disciplinary sanction. Reckless indicates the player acted with complete disregard for the danger to, or consequences for, their opponent; this mandates both a direct free kick and a caution (yellow card). Using excessive force means the player exceeded the necessary use of force, thereby actively endangering the safety of an opponent; this mandates a direct free kick and a sending-off (red card).   
+
+Beyond the severity-evaluated challenges, a direct free kick is definitively awarded for the following absolute infractions, regardless of the force applied:
+
+Committing a handball offence (explicitly excluding the goalkeeper while operating within their own defined penalty area).   
+
+Holding an opponent, which restricts their physical movement.   
+
+Impeding the progress of an opponent coupled with physical contact.   
+
+Biting or spitting at any individual listed on the team rosters or a match official.   
+
+Throwing an object at the match ball, an opponent, or a match official, or making unnatural contact with the ball utilizing a held object.   
+
+If any of these direct free kick offences are committed by a defending player within the spatial confines of their own penalty area, the sanction is elevated, and a penalty kick is awarded to the opposing team. A critical tactical provision states that if a defender begins holding an attacker outside the penalty area and continues that hold into the penalty area, the referee is legally mandated to award a penalty kick.   
+
+Indirect Free Kick Infractions
+Indirect free kicks are reserved for offences that are predominantly technical, involve no direct physical contact with the opponent, or constitute highly specific infractions committed by goalkeepers operating within their own penalty area.
+
+An indirect free kick is awarded to the opposition if a field player:
+
+Plays in a dangerous manner, such as raising a boot near an opponent's head. However, executing a scissors or bicycle kick is expressly permissible provided it is performed in a manner that is not dangerous to an opponent.   
+
+Impedes the progress of an opponent without any physical contact. This is defined as moving deliberately into an opponent's path to obstruct, block, or slow them down when the ball is not within playing distance of either individual. All players retain a right to their position on the field; merely being in the way is legal, whereas moving into the way constitutes an infraction.   
+
+Actively prevents the goalkeeper from releasing the ball from their hands, or kicks/attempts to kick the ball while the goalkeeper is in the physical process of releasing it.   
+
+Initiates a deliberate, choreographed trick to pass the ball to the goalkeeper utilizing the head, chest, knee, etc., designed specifically to circumvent the back-pass law. This offence is penalized whether or not the goalkeeper actually touches the ball with their hands; the initiator of the trick is the penalized party.   
+
+Commits any other unlisted offence for which the referee halts play strictly to caution or send off a player.   
+
+The Goalkeeper Paradigm Shift: The Eight-Second Rule
+Historically, goalkeepers were restricted to controlling the ball with their hands for a maximum of six seconds, an infraction penalized by an indirect free kick. The 2025/2026 regulations have fundamentally restructured this protocol to eliminate subjective enforcement and aggressively deter tactical time-wasting delays.   
+
+A goalkeeper is legally considered to be in control of the ball when it is secured between their hands, trapped between a hand and any surface (including the ground or their own body), touching any part of the hands or arms (excluding accidental rebounds during a save), held in an outstretched open hand, or while being bounced or thrown in the air. Once this control is established, the goalkeeper cannot be lawfully challenged by an opponent.   
+
+Under the revolutionary updated framework, a goalkeeper who controls the ball with their hand(s) or arm(s) for a duration exceeding eight seconds will be penalized. Crucially, the restart for this temporal offence is no longer an indirect free kick. Instead, a corner kick is awarded to the opposing team. This corner kick is to be taken from the corner area nearest to the goalkeeper's exact position at the moment they were penalized.   
+
+To ensure absolute transparency and provide a clear warning, the referee is now mandated to visually count down the final five seconds of this eight-second allowance by visibly raising their hand. The rules explicitly state that no disciplinary action (yellow card) is taken for exceeding the eight seconds unless the goalkeeper commits the offence repeatedly in a persistent manner.   
+
+An indirect free kick remains the standard sanction for a goalkeeper who, while inside their penalty area:
+
+Touches the ball with the hand/arm after releasing it and before it has subsequently touched another player.   
+
+Touches the ball with the hand/arm after it has been deliberately kicked to them by a teammate (the standard back-pass rule).   
+
+Touches the ball with the hand/arm immediately after receiving it directly from a throw-in executed by a teammate.   
+
+Disciplinary Escalations: Cautions, Dismissals, and Advantage Protocols
+The referee's authority to dispense disciplinary action is continuous and absolute. Law 12 categorizes specific behaviors that mandate the issuance of a caution (yellow card) or a sending-off (red card).   
+
+Disciplinary Sanction	Threshold Criteria and Specific Infractions
+Cautionable Offences (Yellow Card)	
+Mandated for unsporting behavior, dissent by word or action, persistent offences against the laws, and delaying the restart of play. Delaying tactics include appearing to take a throw-in but suddenly leaving it to a teammate, excessively delaying a restart, kicking or carrying the ball away after a stoppage, or taking a free kick from the wrong position to force a retake. Goal celebrations must not be excessive; choreographed routines that cause excessive time-wasting, climbing onto perimeter fences, covering the head/face with a mask, or removing the shirt are all strictly cautionable offences. Leaving the field to celebrate is not an offence, provided the return is prompt.
+
+Sending-Off Offences (Red Card)	
+Mandated for severe infractions including violent conduct, biting or spitting, and using offensive, insulting, or abusive language/actions. A player is dismissed for receiving a second caution in the same match. Furthermore, a player must be sent off for committing serious foul play. Any tackle or challenge that endangers the safety of an opponent or uses excessive force or brutality constitutes serious foul play. Specifically, lunging at an opponent from the front, side, or behind utilizing one or both legs, coupled with excessive force, meets this threshold.
+
+DOGSO Modifications	
+Denying the opposing team an Obvious Goal-Scoring Opportunity (DOGSO) through a handball or a foul typically warrants a red card. However, a recent IFAB clarification stipulates that if the referee applies the advantage clause for a DOGSO offence and a goal is subsequently scored, the offending player is no longer cautioned, because the offence ultimately failed to prevent the goal.
+
+  
+The application of the "advantage" rule is heavily restricted in scenarios involving severe infractions. The referee should not apply advantage in situations involving serious foul play, violent conduct, or an offence warranting a second yellow card unless there is a clear, immediate opportunity to score a goal. If advantage is applied under these extreme circumstances, the referee must send off the offending player when the ball next goes out of play. However, if the offending player actively plays the ball or challenges an opponent before the next stoppage, the referee must immediately stop play, issue the red card, and restart the match with an indirect free kick for the opposing team, unless the player committed an even more serious offence in the interim.   
+
+Furthermore, IFAB permits confederations to implement guidelines for temporary dismissals (colloquially known as "sin bins"). This applies to all players, including goalkeepers, with the referee indicating the dismissal by showing a yellow card and pointing to the designated temporary dismissal area. The temporal length of the dismissal is standardized for all relevant offences within the competition.   
+
+Modern Behavioral Management and Match Flow Optimization (2025-2027)
+The 2025/2026 and 2026/2027 IFAB cycles exhibit a profound emphasis on the mitigation of disruptive behaviors, tactical time-wasting, and confrontational flashpoints. The regulatory bodies have introduced targeted, time-bound protocols designed to force compliance mathematically, reducing the reliance on the referee's subjective interpretation of intent.   
+
+The "Only the Captain" Guidelines and Behavioral Proxies
+To eradicate the pervasive phenomenon of players aggressively surrounding and intimidating match officials, IFAB has codified the "Only the captain" guidelines, which competition organizers possess the option to implement.   
+
+This framework dictates that only one player from each team—traditionally the captain—is legally permitted to approach the referee. When doing so, the interaction must be conducted in a strictly respectful manner. The referee is fully empowered to instruct players, verbally or via gestures, not to approach. Crucially, team captains bear the explicit responsibility of actively directing their teammates away from the official. Any player who unlawfully approaches or surrounds the referee is strictly liable to receive a caution (yellow card). To facilitate communication, the referee may delay the restart of play to allow captains time to explain decisions to their teammates or demand proper behavior.   
+
+A unique logistical challenge arises when the team's designated captain is the goalkeeper, as their static position prevents timely intervention during midfield incidents. To resolve this, the guidelines mandate that a nominated outfield player must be identified to the referee no later than the pre-match coin toss to act as the communicative proxy. Only the goalkeeper or the nominated proxy player may approach the referee, but never both simultaneously. If this nominated proxy is substituted or sent off, a replacement must be immediately designated. In youth and grassroots football, the referee can formalize these guidelines during a match by executing a specific visual signal: crossing both arms above the head at the wrists, then uncrossing them in a forward pushing motion to command players to retreat.   
+
+Official Cooling-Off Periods
+Confrontational escalations often result in prolonged delays and mass brawls. To provide a structural de-escalation mechanism, IFAB continues to oversee trials for official "cooling-off periods" at lower levels of the game. During highly volatile situations, the referee possesses the authority to suspend play and direct both teams to their respective penalty areas to cool down. This protocol is strictly capped at a maximum of two cooling-off periods per match. If the environment remains unsafe or unmanageable after two periods have been exhausted, the referee is authorized to abandon the match entirely, though they retain the right to abandon a match without utilizing the periods if immediate danger is present.   
+
+Mathematical Anti-Time-Wasting Protocols
+Tactical delays utilized to exhaust the match clock have been addressed via severe, time-bound protocols integrated into the 2026/2027 Laws of the Game, effectively creating a structural disadvantage for the offending team.   
+
+Anti-Delay Protocol	Trigger Condition	Enforcement Mechanism and Punitive Consequence
+Time-Limited Substitutions	A substituted player failing to exit the field promptly.	
+Substituted players are mandated to leave the field within exactly ten seconds of the substitution board being displayed or the referee's signal. If the player fails to exit within this window, they must still leave, but the incoming substitute is barred from entering until the first natural stoppage after one full minute (using a running clock) has elapsed following the restart.
+
+Off-Field Injury Assessment	Tactical simulation of injuries to break momentum.	
+If a player requires on-field medical assessment, or their injury forces a stoppage, they must leave the field of play. Once play restarts, the injured player is legally required to remain off the field for a mandatory period of one minute (running clock) before becoming eligible to re-enter.
+
+5-Second Restart Limit	Deliberate delays in taking throw-ins or goal kicks.	
+If the referee judges a restart is taking too long, they will initiate a visible five-second countdown. If the ball is not in play by the end of the countdown, possession is forfeited. A delayed throw-in is awarded to the opposing team; a delayed goal kick results in a corner kick being awarded to the opponents.
+
+  
+These protocols fundamentally weaponize time. A team attempting to protect a lead through slow substitutions or feigned injuries will now be forced to defend with ten men for a full minute of active play, radically shifting the risk-reward calculus of tactical delays. While initial trials explored the concept of "blue cards" for temporary dismissals at the elite level, the official AGM consensus pivoted toward these concrete temporal sanctions rather than introducing a new disciplinary card color.   
+
+Video Assistant Referee (VAR) Protocol and Technological Integration
+The utilization of Video Match Officials (VMOs) under Law 6 has fundamentally altered the epistemology of refereeing, ensuring that "clear and obvious errors" and "serious missed incidents" are rectified with high fidelity.   
+
+Core Principles of the VAR System
+The VAR operates independently from a dedicated Video Operation Room (VOR), assisted by Assistant VARs (AVARs) and Replay Operators (ROs). The VAR system continuously and automatically checks footage for four specific categories of match-changing incidents: Goal/No Goal, Penalty/No Penalty, Direct Red Cards (excluding second yellow cards historically), and Mistaken Identity. Because all critical incidents are automatically checked, players and coaches are not required, nor permitted, to request reviews.   
+
+A fundamental principle dictates that the on-field referee must always make an initial decision; they are strictly prohibited from issuing "no decision" and defaulting to the VAR. The referee's original decision stands unless the video review clearly demonstrates a clear and obvious error. While the VAR can recommend a review, only the referee possesses the authority to initiate one, and the final decision always rests with the referee. Accuracy is prioritized over speed; therefore, there is no maximum time limit imposed on the review process.   
+
+Check vs. Review Procedures
+During an automatic check, if no error is found (a "silent check"), the VAR typically does not communicate with the referee, though they may provide confirmation to aid in match management. If the referee needs to delay a restart to allow the check to complete, they signal this by holding a finger to their earpiece and extending their other arm.   
+
+A formal review is initiated when the VAR recommends it or the referee suspects a serious incident was missed. The referee stops play (ideally in a neutral zone) and executes the "TV signal" (a rectangular gesture).   
+
+On-Field Review (OFR): Utilized for subjective decisions, such as assessing the intensity of a foul or determining offside interference. The referee views the footage at a dedicated Referee Review Area (RRA). Normal speed replays are used to evaluate intensity, while slow-motion is reserved for identifying exact points of contact.   
+
+VAR-Only Review: Utilized for purely factual, geographical decisions, such as whether a foul occurred inside or outside the penalty area, the exact point of contact for a handball, or determining if the ball crossed the boundary line.   
+
+Following the review, the referee displays the TV signal again and communicates the final decision, proceeding to take, change, or rescind disciplinary actions. Competitions now possess the option to allow referees to publicly announce and explicitly explain their final decisions to the stadium audience and television viewers via the public address system, enhancing transparency.   
+
+Strict behavioral codes surround the technology. Any player, substitute, or team official who enters the RRA or excessively displays the TV signal will be cautioned. Any personnel entering the VOR will be immediately sent off. A match's validity is legally insulated; it is not invalidated due to VAR technology malfunctions, incorrect VAR-related decisions, or decisions not to review an incident. If a VAR official becomes incapacitated, they must be replaced by a qualified individual; if no replacement is available, the match continues without VAR.   
+
+Expansions to the VAR Protocol (2025-2027)
+To maximize the utility of the VAR system without compromising the flow of the game, the IFAB AGM approved three significant adjustments to the protocol, expanding the scope of reviewable incidents based on the presence of clear evidence :   
+
+Incorrect Second Yellow Cards: The VAR is now permitted to assist the referee in relation to red cards that arise from a clearly incorrect second yellow card. Previously, VAR intervention was strictly limited to direct, straight red card offences.   
+
+Expanded Mistaken Identity: The VAR can now intervene when the referee penalizes the wrong team entirely for an offence, resulting in a red or yellow card being shown to the incorrect player.   
+
+Corner Kick Rectification: Competitions have the option to allow VARs to review clearly incorrectly awarded corner kicks. However, this is heavily caveated: the review is only permitted if it can be completed immediately and without causing any delay to the restart of play.   
+
+These VAR expansions occur alongside ongoing trials for Semi-Automated Offside Technology (SAOT) and Football Video Support (FVS), which seek to automate factual decision-making and further reduce the temporal footprint of video reviews.   
+
+Second and Third-Order Tactical Implications
+The integration of these updated laws generates profound second and third-order effects on the tactical execution and psychological landscape of the sport. The regulatory shifts dictate spatial, temporal, and strategic adaptations for coaching staffs globally.
+
+The transition from a six-second indirect free kick rule to an eight-second corner kick rule for goalkeepers fundamentally alters high-pressing triggers. The previous rule was notoriously subjective. By mandating a visible countdown for the final five seconds, referees enforce the rule overtly. The punitive sanction of a corner kick is statistically devastating compared to an indirect free kick. Consequently, opposing forwards will utilize the referee's visual countdown as an absolute trigger to initiate high-intensity presses, knowing the goalkeeper is under acute temporal duress and may be forced into an erratic clearance to avoid conceding a corner.   
+
+The mathematical disadvantage created by the one-minute waiting period for slow substitutions and off-field injury assessments acts as a severe deterrent. A team attempting to protect a narrow lead by feigning cramps will now face a full minute of active play with only ten men. The statistical risk of conceding a goal while numerically disadvantaged mathematically outweighs the few seconds gained by the initial delay. This inherently compels rapid transitions and radically increases the proportion of effective playing time.   
+
+Furthermore, the allowance for VAR to silently review incorrectly awarded corner kicks closes a significant loophole in set-piece capitalization. Historically, an incorrectly awarded corner resulting in a goal was an unreviewable sequence. By permitting immediate checks on the out-of-play touch, the defensive integrity of the match is preserved. Additionally, utilizing the last point of contact for offside determinations during a goalkeeper throw eliminates the ambiguity of the throwing motion. A throw is a continuous kinetic action; measuring offside at the exact millisecond of release provides video operators with a binary frame, drastically accelerating VAR offside checks on rapid counter-attacks.   
+
+Conclusion
+The IFAB Laws of the Game for the current 2025-2027 cycle represent a highly sophisticated, rigorously calibrated regulatory system. Through an exhaustive specification of Law 12, it is evident that the threshold for fouls, technical misconduct, and goalkeeper possession is tightly defined to protect both player welfare and the integrity of the match. The transformation of the goalkeeper possession rule into an eight-second limit, heavily penalized by a corner kick, stands as a monumental shift in spatial punishment.   
+
+Coupled with the "Only the captain" guidelines, the ten-second substitution exit mandate, the one-minute off-field injury wait, and the continual expansion of the Video Assistant Referee protocol to cover second yellow cards and corner kicks, the modern rulebook operates as an aggressive mechanism designed to enforce continuous play. This legal framework leaves minimal ambiguity, utilizing strict chronological metrics and visual countdowns to eliminate subjectivity in time-wasting, thereby ensuring that the outcome of a match is determined exclusively by the technical, tactical, and athletic merits of the players while the ball is in active play.   
+

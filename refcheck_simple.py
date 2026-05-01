@@ -16,6 +16,7 @@ Setup:
   # Add GEMINI_API_KEY="..." to .env.local
 """
 
+import base64
 import gc
 import json
 import logging
@@ -23,6 +24,7 @@ import os
 import pathlib
 import sys
 import tempfile
+import time
 
 import cv2
 from dotenv import load_dotenv
@@ -65,7 +67,7 @@ except Exception as _e:
 # ── Configuration (unchanged) ─────────────────────────────────────────────────
 VIDEO_PATH      = "clip.mp4"
 MODEL_NAME      = "gemini-2.5-flash"
-NUM_FRAMES      = 6          # more frames → richer temporal context
+NUM_FRAMES      = 30         # more frames → richer temporal context
 MAX_WIDTH       = 512        # pixels — keeps payload manageable
 JPEG_QUALITY    = 75         # slight quality bump now that we're not per-frame
 MAX_OUT_TOKENS  = 4096       # gemini-2.5-flash uses thinking tokens; needs headroom
@@ -97,12 +99,15 @@ def _build_system_prompt(referee_name: str = "", referee_data: str = "") -> str:
         f"{LAW_12_TEXT}\n"
         "--- END OF RULEBOOK ---\n\n"
         "Respond with ONLY a valid JSON object — no markdown, no code fences, no extra text.\n"
-        'The JSON must contain exactly three keys: "verdict", "reasoning", and "referee_analysis".\n'
+        'The JSON must contain exactly eight keys: "verdict", "confidence_score", "reasoning", "referee_stats", '
+        '"foul_frames", "detected_entities", "rule_alignment_score", and "visual_clarity_index".\n'
         '"verdict" must be exactly one of: "Fair Call", "Bad Call", or "Inconclusive".\n'
+        '"confidence_score", "rule_alignment_score", and "visual_clarity_index" must be integers between 0 and 100.\n'
         '"reasoning" must be 2-3 sentences describing the motion sequence, '
-        "citing specific visual evidence AND referencing the exact IFAB Law 12 clause that supports your verdict.\n"
-        '"referee_analysis" must be a 1-2 sentence summary of how the referee\'s historical stats '
-        "align with the play. If no referee context was provided, state that clearly."
+        "citing specific visual evidence AND referencing the exact IFAB Law 12 clause (e.g. 'Law 12 Part 1') that supports your verdict.\n"
+        '"referee_stats" must be an object with two string keys: "historical_bias" (1 sentence summary) and "accuracy_rating" (e.g. "High", "Medium", "Low").\n'
+        '"foul_frames" must be an array of integers representing the specific frame numbers (1-30) where the focal action/foul occurs.\n'
+        '"detected_entities" must be an array of strings like "[Player 42: Blue]", "[Player 4: White]", "[Ball: In Play]" identifying key objects.'
     )
 
 
@@ -222,6 +227,7 @@ def analyze_sequence(client: genai.Client, frame_bytes: list[bytes], referee_nam
     ]
     parts.append(types.Part.from_text(text=USER_PROMPT))
 
+    start_time = time.time()
     response = client.models.generate_content(
         model=MODEL_NAME,
         contents=parts,
@@ -234,14 +240,15 @@ def analyze_sequence(client: genai.Client, frame_bytes: list[bytes], referee_nam
             ),
         ),
     )
+    inference_time_seconds = round(time.time() - start_time, 2)
 
     raw = response.text.strip()
-    log.info("Gemini response received (%d chars).", len(raw))
-    return parse_response(raw)
+    log.info("Gemini response received in %.2fs (%d chars).", inference_time_seconds, len(raw))
+    return parse_response(raw, inference_time_seconds)
 
 
-# ── JSON parsing / validation (unchanged) ─────────────────────────────────────
-def parse_response(raw: str) -> dict:
+# ── JSON parsing / validation ───────────────────────────────────────────────
+def parse_response(raw: str, inference_time_seconds: float) -> dict:
     cleaned = raw.strip()
 
     # Strip any accidental markdown code fences
@@ -254,17 +261,64 @@ def parse_response(raw: str) -> dict:
         obj = json.loads(cleaned)
     except json.JSONDecodeError:
         log.warning("Model returned invalid JSON. Raw (%d chars): %s", len(raw), raw[:300])
-        return {"verdict": "Inconclusive", "reasoning": "Could not parse model response.", "referee_analysis": ""}
+        return {
+            "verdict": "Inconclusive", 
+            "confidence_score": 0, 
+            "reasoning": "Could not parse model response.", 
+            "referee_stats": {"historical_bias": "N/A", "accuracy_rating": "N/A"},
+            "inference_time_seconds": inference_time_seconds
+        }
 
     verdict          = str(obj.get("verdict",          "")).strip()
     reasoning        = str(obj.get("reasoning",        "")).strip()
-    referee_analysis = str(obj.get("referee_analysis", "")).strip()
+    
+    # Safely parse confidence_score
+    try:
+        confidence_score = int(obj.get("confidence_score", 0))
+    except (ValueError, TypeError):
+        confidence_score = 0
+        
+    try:
+        rule_alignment_score = int(obj.get("rule_alignment_score", 0))
+    except (ValueError, TypeError):
+        rule_alignment_score = 0
+        
+    try:
+        visual_clarity_index = int(obj.get("visual_clarity_index", 0))
+    except (ValueError, TypeError):
+        visual_clarity_index = 0
+        
+    foul_frames = obj.get("foul_frames", [])
+    if not isinstance(foul_frames, list): foul_frames = []
+    
+    detected_entities = obj.get("detected_entities", [])
+    if not isinstance(detected_entities, list): detected_entities = []
+
+    # Safely parse referee_stats
+    raw_stats = obj.get("referee_stats", {})
+    if not isinstance(raw_stats, dict):
+        raw_stats = {}
+        
+    referee_stats = {
+        "historical_bias": str(raw_stats.get("historical_bias", "N/A")).strip(),
+        "accuracy_rating": str(raw_stats.get("accuracy_rating", "N/A")).strip()
+    }
 
     if verdict not in VALID_VERDICTS:
         log.warning("Unexpected verdict '%s' → defaulting to 'Inconclusive'.", verdict)
         verdict = "Inconclusive"
 
-    return {"verdict": verdict, "reasoning": reasoning, "referee_analysis": referee_analysis}
+    return {
+        "verdict": verdict, 
+        "confidence_score": confidence_score, 
+        "reasoning": reasoning, 
+        "referee_stats": referee_stats,
+        "foul_frames": foul_frames,
+        "detected_entities": detected_entities,
+        "rule_alignment_score": rule_alignment_score,
+        "visual_clarity_index": visual_clarity_index,
+        "inference_time_seconds": inference_time_seconds
+    }
 
 
 # ── FastAPI app ────────────────────────────────────────────────────────────────
@@ -343,6 +397,8 @@ async def analyze(
         # ── Run Gemini inference ──────────────────────────────────────────────
         try:
             result = analyze_sequence(client, frame_bytes, referee_name)
+            # Encode frames as Base64 so the frontend can display them
+            result["frames"] = [base64.b64encode(fb).decode("utf-8") for fb in frame_bytes]
         except Exception as exc:
             log.error("Gemini error: %s", exc)
             raise HTTPException(
