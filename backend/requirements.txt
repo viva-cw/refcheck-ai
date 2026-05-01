@@ -1,0 +1,18 @@
+# RefCheck AI — FastAPI Backend Dependencies
+# Install: pip install -r requirements.txt
+
+# Web framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# Async HTTP client (Ollama calls)
+httpx>=0.27.0
+
+# Computer vision (frame extraction)
+opencv-python>=4.9.0
+
+# Data validation
+pydantic>=2.0.0
+
+# Multipart form handling
+python-multipart>=0.0.9

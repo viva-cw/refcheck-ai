@@ -1,0 +1,115 @@
+{
+  "referees": {
+    "Alex Mercer": {
+      "name": "Alex Mercer",
+      "nation": "USA",
+      "leagues": ["MLS", "CONCACAF"],
+      "stats": {
+        "fouls_per_game_avg": 24.3,
+        "yellow_cards_per_game_avg": 3.1,
+        "red_cards_per_100_games": 8.2,
+        "penalty_rate_per_game": 0.41
+      },
+      "tendencies": "Historically calls 15% more fouls on slide tackles than the MLS average. Known to apply the advantage clause generously in open play but is strict on persistent fouling. Rarely upgrades cautions to red cards on second challenges unless clearly reckless."
+    },
+    "Sarah Jenkins": {
+      "name": "Sarah Jenkins",
+      "nation": "USA",
+      "leagues": ["MLS", "FIFA"],
+      "stats": {
+        "fouls_per_game_avg": 22.7,
+        "yellow_cards_per_game_avg": 2.8,
+        "red_cards_per_100_games": 5.1,
+        "penalty_rate_per_game": 0.35
+      },
+      "tendencies": "One of MLS's most experienced officials. Tends to let physical play continue longer before stopping play, resulting in a below-average foul count. Has a high threshold for simulation calls but is quick to caution for dissent. Penalty award rate is below league average."
+    },
+    "ismail_elfath": {
+      "name": "Ismail Elfath",
+      "nation": "USA",
+      "leagues": ["MLS", "FIFA"],
+      "stats": {
+        "fouls_per_game_avg": 22.7,
+        "yellow_cards_per_game_avg": 2.8,
+        "red_cards_per_100_games": 5.1,
+        "penalty_rate_per_game": 0.35
+      },
+      "tendencies": "One of MLS's most experienced officials. Tends to let physical play continue longer before stopping play, resulting in a below-average foul count. Has a high threshold for simulation calls but is quick to caution for dissent. Penalty award rate is below league average."
+    },
+    "allen_chapman": {
+      "name": "Allen Chapman",
+      "nation": "USA",
+      "leagues": ["MLS"],
+      "stats": {
+        "fouls_per_game_avg": 26.1,
+        "yellow_cards_per_game_avg": 3.6,
+        "red_cards_per_100_games": 9.4,
+        "penalty_rate_per_game": 0.52
+      },
+      "tendencies": "Has the highest foul and penalty award rate in MLS. Known for tight control of physical play, especially in the defensive third. Quick to book players for tactical fouls that stop counter-attacks. Teams concede more penalties in games he officiated near the penalty arc."
+    },
+    "drew_fischer": {
+      "name": "Drew Fischer",
+      "nation": "Canada",
+      "leagues": ["MLS", "Canadian Premier League"],
+      "stats": {
+        "fouls_per_game_avg": 23.5,
+        "yellow_cards_per_game_avg": 2.9,
+        "red_cards_per_100_games": 6.0,
+        "penalty_rate_per_game": 0.38
+      },
+      "tendencies": "Balanced officiating style. Applies the Law 12 'careless vs reckless' threshold consistently. Known to consult with assistant referees before making contentious decisions. Rarely shown to make VAR-overturned calls — one of the lowest overturn rates in MLS history."
+    },
+    "jose_carlos_rivero": {
+      "name": "José Carlos Rivero",
+      "nation": "Venezuela",
+      "leagues": ["CONMEBOL", "Copa Libertadores", "MLS Cup"],
+      "stats": {
+        "fouls_per_game_avg": 28.4,
+        "yellow_cards_per_game_avg": 4.2,
+        "red_cards_per_100_games": 11.7,
+        "penalty_rate_per_game": 0.59
+      },
+      "tendencies": "Among the strictest international officials in CONMEBOL competitions. High card rate and very low tolerance for simulation — has issued multiple yellow cards for diving in single matches. Physical challenges in the box are consistently penalized. Known for decisive, fast VAR checks."
+    },
+    "unknown": {
+      "name": "Unknown / Not Identified",
+      "nation": "N/A",
+      "leagues": [],
+      "stats": {},
+      "tendencies": "The officiating crew for this match could not be identified from the provided game context. Analysis is based solely on IFAB Law 12 without referee-specific historical tendencies."
+    }
+  },
+  "league_defaults": {
+    "MLS": {
+      "avg_fouls_per_game": 23.8,
+      "avg_yellow_cards_per_game": 3.0,
+      "avg_penalty_rate": 0.42,
+      "notes": "MLS uses VAR for all matches since 2020. Physical play in the defensive third is generally penalized more strictly than in European leagues."
+    },
+    "Premier League": {
+      "avg_fouls_per_game": 21.4,
+      "avg_yellow_cards_per_game": 2.6,
+      "avg_penalty_rate": 0.38,
+      "notes": "High-tempo league; referees instructed to allow more physical contact before stopping play. VAR threshold for overturning on-field decisions is strictly 'clear and obvious error'."
+    },
+    "La Liga": {
+      "avg_fouls_per_game": 25.9,
+      "avg_yellow_cards_per_game": 3.8,
+      "avg_penalty_rate": 0.51,
+      "notes": "Historically the highest card rate among Europe's top 5 leagues. Spanish referees apply a lower threshold for simulation cautions."
+    },
+    "Bundesliga": {
+      "avg_fouls_per_game": 22.1,
+      "avg_yellow_cards_per_game": 2.7,
+      "avg_penalty_rate": 0.40,
+      "notes": "Referees tend to favor advantage play and allow more physicality. Lower foul count reflects the fast, open style of play."
+    },
+    "Serie A": {
+      "avg_fouls_per_game": 26.7,
+      "avg_yellow_cards_per_game": 3.5,
+      "avg_penalty_rate": 0.46,
+      "notes": "Tactical fouling is more frequently cautioned. Defensive holding inside the penalty area historically called at a higher rate than other major leagues."
+    }
+  }
+}

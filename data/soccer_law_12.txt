@@ -1,0 +1,165 @@
+IFAB LAWS OF THE GAME — LAW 12: FOULS AND MISCONDUCT
+Official Reference Text (2024/25 Edition)
+======================================================
+
+PART 1 — DIRECT FREE KICKS
+----------------------------
+A direct free kick is awarded if a player commits any of the following offences against
+an opponent in a manner considered by the referee to be careless, reckless, or using
+excessive force:
+
+• Charges an opponent
+• Jumps at an opponent
+• Kicks or attempts to kick an opponent
+• Pushes an opponent
+• Strikes or attempts to strike an opponent (including head-butt)
+• Tackles or challenges an opponent
+• Trips or attempts to trip an opponent
+
+CARELESS means the player shows a lack of attention or consideration when making a
+challenge, with no need for a disciplinary sanction.
+
+RECKLESS means the player acts with disregard for the danger to, or consequences for,
+an opponent — a caution (yellow card) is required.
+
+USING EXCESSIVE FORCE means the player far exceeds the necessary use of force and/or
+endangers the safety of an opponent — a send-off (red card) is required.
+
+Additional direct free-kick offences (regardless of careless/reckless/excessive force):
+• Handles the ball deliberately (except goalkeeper in own penalty area)
+• Commits an offence against an opponent inside the player's own penalty area
+• Bites or spits at anyone
+• Throws an object at the ball, an opponent, or a match official
+
+HANDBALL RULE (Law 12.1):
+A direct free kick is awarded if a player (other than the goalkeeper in their own penalty
+area) deliberately handles the ball. For the purposes of determining handball offences,
+the upper boundary of the arm is in line with the bottom of the armpit.
+
+It is an offence if a player:
+• Deliberately touches the ball with their hand/arm, including moving the hand/arm
+  towards the ball
+• Scores in the opponents' goal directly from their hand/arm (even if accidental)
+• Scores in the opponents' goal immediately after the ball has touched their
+  hand/arm (even if accidental)
+• Creates a goal-scoring opportunity after the ball has touched their hand/arm
+  (even if accidental)
+• Gains possession/control of the ball with their hand/arm and then scores, or
+  creates a goal-scoring opportunity
+
+It is NOT automatically an offence if the ball touches a player's hand/arm when:
+• It directly touches the player's own head, body, or foot
+• The player falls and the hand/arm is between the body and the ground to support
+  the body (not extended to make the body bigger)
+• The hand/arm is close to the body and did not make the body unnaturally bigger
+
+
+PART 2 — INDIRECT FREE KICKS
+-------------------------------
+An indirect free kick is awarded if:
+
+• A goalkeeper inside their own penalty area handles a back-pass played deliberately
+  with the feet by a teammate
+• A goalkeeper inside their own penalty area handles the ball after it has been
+  directly received from a throw-in taken by a teammate
+• A goalkeeper delays getting the ball into play or wastes time
+• A player plays in a dangerous manner
+• A player impedes the progress of an opponent without any contact
+• Any other offence not previously mentioned where play is stopped to caution or
+  send off a player
+
+DANGEROUS PLAY: Any action which, while attempting to play the ball, threatens injury
+to any player (including the player themselves), such as attempting to kick the ball
+when held by the goalkeeper, or going for a ball with the studs or sole of the boot at
+the level of an opponent's face.
+
+
+PART 3 — DISCIPLINARY ACTION
+-------------------------------
+A player is cautioned (YELLOW CARD) if they commit any of the following:
+• Unsporting behaviour
+• Dissent by word or action
+• Persistent offences
+• Delaying the restart of play
+• Failing to respect the required distance
+• Entering/re-entering or deliberately leaving the field without the referee's permission
+• Simulation (attempting to deceive the referee by feigning injury or pretending to
+  have been fouled — known as "diving")
+
+A player is sent off (RED CARD) if they commit any of the following (SERIOUS FOUL PLAY):
+• Serious foul play: Tackles or challenges an opponent with excessive force that
+  endangers their physical integrity
+• Violent conduct
+• Spitting at a person
+• Biting a person
+• Denying an obvious goal-scoring opportunity (DOGSO):
+  — To an opponent moving towards the offender's goal by an offence punishable by a
+    free kick or penalty kick
+• Using offensive, insulting, or abusive language and/or gestures
+• Receiving a second caution in the match
+
+
+PART 4 — PENALTY KICK OFFENCES
+---------------------------------
+A penalty kick is awarded when any of the above direct free-kick offences are committed
+by a player inside their own penalty area, regardless of the position of the ball,
+provided it is in play.
+
+
+PART 5 — ADVANTAGE AND ADVANTAGE CLAUSE
+------------------------------------------
+The referee may allow play to continue if the non-offending team will benefit from the
+advantage and penalise the original offence if the anticipated advantage does not
+materialise at that time.
+
+
+PART 6 — VAR (VIDEO ASSISTANT REFEREE) PROTOCOL
+-------------------------------------------------
+VAR reviews are only permitted for:
+• Goal / no goal
+• Penalty kick / no penalty kick
+• Direct red card (not second yellow)
+• Mistaken identity
+
+The VAR checks the following criteria:
+• Was there contact? (tackle, charge, push, handball)
+• Was the contact careless, reckless, or with excessive force?
+• Did the incident occur inside or outside the penalty area?
+• Was the ball in play at the time of the offence?
+• Was the player's positioning legal?
+
+The reviewing VAR official checks video angles and advises the on-field referee, who
+makes the final decision. The standard for overriding an on-field decision is "clear
+and obvious error."
+
+KEY DEFINITIONS FOR VAR REVIEW:
+• TACKLE: An attempt to win the ball from an opponent using the foot or leg.
+• CHARGE: Using the shoulder to jostle or push an opponent.
+• OBSTRUCTION/IMPEDING: Blocking an opponent's path without playing the ball.
+• SIMULATION: Deliberately falling or acting as if fouled without contact,
+  intended to deceive the referee.
+• LAST DEFENDER: The last outfield player between the attacker and the goal.
+
+
+PART 7 — PRACTICAL GUIDANCE FOR VISUAL ANALYSIS
+-------------------------------------------------
+When reviewing frames from a video clip, the following visual cues are key:
+
+1. POINT OF CONTACT: Where on the opponent's body did contact occur?
+   — Leg-to-leg: possible trip or tackle
+   — Arm-to-back/chest: possible push or charge
+   — Foot-to-ankle: possible dangerous tackle
+   — No contact: possible simulation
+
+2. TIMING: Did the player play the ball before, simultaneously with, or after
+   making contact with the opponent?
+   — Ball first, then player: generally a fair challenge
+   — Player first, then ball: likely a foul
+
+3. INTENT AND BODY POSTURE: Was the player in a normal defensive position or
+   were they lunging/extending in a manner that endangered the opponent?
+
+4. FOLLOW-THROUGH: Did the player follow through with force after making contact?
+
+5. REACTION OF FOULED PLAYER: Does the reaction appear commensurate with the
+   force of contact, or is it exaggerated (simulation)?

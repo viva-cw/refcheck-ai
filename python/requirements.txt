@@ -1,0 +1,14 @@
+# RefCheck AI — Python Backend Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core AI SDK (new google-genai package)
+google-genai>=1.0.0
+
+# Computer vision (frame extraction)
+opencv-python>=4.9.0
+
+# Image handling (PIL for Gemini SDK compatibility)
+Pillow>=10.0.0
+
+# Environment variable loading (optional, for .env support)
+python-dotenv>=1.0.0
