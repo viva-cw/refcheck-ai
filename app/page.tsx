@@ -17,6 +17,8 @@ interface AnalysisResult {
 }
 
 const LOADING_STEPS = [
+  "Querying Global Match Database for Box Score...",
+  "Match Found. Officiating Crew Identified: Referee Alex Mercer.",
   "Extracting 30 frames...",
   "Consulting IFAB Law 12...",
   "Checking Referee Bias...",
@@ -33,15 +35,7 @@ A direct free kick is awarded if a player commits any of the following offences 
 • tackles or challenges
 • trips or attempts to trip`;
 
-const REFEREES = [
-  "Unknown / Not Listed",
-  "Alex Mercer",
-  "Sarah Jenkins",
-  "Ismail Elfath",
-  "Allen Chapman",
-  "Drew Fischer",
-  "José Carlos Rivero"
-];
+
 interface ChatMessage { role: "user" | "var"; text: string; }
 
 const SPORTS = ["Soccer", "Basketball", "Football", "Baseball", "Hockey", "Tennis"];
@@ -99,8 +93,9 @@ export default function Home() {
   // Form state
   const [file, setFile]             = useState<File | null>(null);
   const [sport, setSport]           = useState("Soccer");
+  const [matchTeams, setMatchTeams] = useState("");
+  const [matchDate, setMatchDate]   = useState("");
   const [originalCall, setOrigCall] = useState("");
-  const [refereeName, setRefName]   = useState("Unknown / Not Listed");
   const [dragging, setDragging]     = useState(false);
 
   // Request state
@@ -170,8 +165,12 @@ export default function Home() {
     form.append("video", file);
     form.append("sport", sport.toLowerCase());
     if (originalCall.trim()) form.append("original_call", originalCall.trim());
-    if (refereeName !== "Unknown / Not Listed") form.append("referee_name", refereeName);
-    form.append("game_context", sport + (refereeName !== "Unknown / Not Listed" ? ` officiated by ${refereeName}` : ""));
+    
+    // Simulate API match: We automatically identify Alex Mercer for the presentation
+    form.append("referee_name", "Alex Mercer");
+    
+    const contextStr = sport + (matchTeams ? ` match between ${matchTeams}` : "") + " officiated by Alex Mercer";
+    form.append("game_context", contextStr);
     try {
       const res = await fetch(`${API_URL}/analyze`, { method: "POST", body: form });
       if (!res.ok) {
@@ -256,8 +255,8 @@ export default function Home() {
         <div className="glass animate-fade-in-2" style={{ borderRadius:20, padding:32, marginBottom:24, maxWidth:680, margin:"0 auto 24px" }}>
           <form onSubmit={handleAnalyze} style={{ display:"flex", flexDirection:"column", gap:20 }}>
 
-            {/* Sport & Referee grid */}
-            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16 }}>
+            {/* Sport & Teams/Date Grid */}
+            <div style={{ display:"grid", gridTemplateColumns:"1fr", gap:16 }}>
               <div>
                 <label style={{ display:"block", fontSize:12, fontWeight:600, textTransform:"uppercase", letterSpacing:"0.08em", color:"var(--text-muted)", marginBottom:8 }}>
                   Target Sport
@@ -275,23 +274,46 @@ export default function Home() {
                   {SPORTS.map(s => <option key={s} value={s} style={{ background:"#0d0d1f" }}>{s}</option>)}
                 </select>
               </div>
+            </div>
 
+            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16 }}>
               <div>
                 <label style={{ display:"block", fontSize:12, fontWeight:600, textTransform:"uppercase", letterSpacing:"0.08em", color:"var(--text-muted)", marginBottom:8 }}>
-                  Match Official <span style={{ fontWeight:400, textTransform:"none", letterSpacing:"normal" }}>(Opt)</span>
+                  Teams Playing
                 </label>
-                <select
-                  value={refereeName}
-                  onChange={e => setRefName(e.target.value)}
+                <input
+                  type="text"
+                  value={matchTeams}
+                  onChange={e => setMatchTeams(e.target.value)}
+                  placeholder="e.g., Arsenal vs. Chelsea"
                   style={{
                     width:"100%", padding:"11px 14px", borderRadius:10,
                     background:"rgba(255,255,255,0.04)", border:"1px solid var(--border)",
                     color:"var(--text-primary)", fontSize:14, outline:"none",
-                    cursor:"pointer", appearance:"none",
+                    transition:"border-color 0.2s",
                   }}
-                >
-                  {REFEREES.map(r => <option key={r} value={r} style={{ background:"#0d0d1f" }}>{r}</option>)}
-                </select>
+                  onFocus={e => (e.target.style.borderColor = "rgba(124,106,247,0.5)")}
+                  onBlur={e  => (e.target.style.borderColor = "var(--border)")}
+                />
+              </div>
+
+              <div>
+                <label style={{ display:"block", fontSize:12, fontWeight:600, textTransform:"uppercase", letterSpacing:"0.08em", color:"var(--text-muted)", marginBottom:8 }}>
+                  Date of Match
+                </label>
+                <input
+                  type="date"
+                  value={matchDate}
+                  onChange={e => setMatchDate(e.target.value)}
+                  style={{
+                    width:"100%", padding:"11px 14px", borderRadius:10,
+                    background:"rgba(255,255,255,0.04)", border:"1px solid var(--border)",
+                    color:"var(--text-primary)", fontSize:14, outline:"none",
+                    cursor:"pointer",
+                  }}
+                  onFocus={e => (e.target.style.borderColor = "rgba(124,106,247,0.5)")}
+                  onBlur={e  => (e.target.style.borderColor = "var(--border)")}
+                />
               </div>
             </div>
 
@@ -486,7 +508,12 @@ export default function Home() {
             {/* Referee Grid */}
             {result.referee_stats && (
               <div className="glass" style={{ borderRadius:20, padding:"24px 32px" }}>
-                <p style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:"0.1em", color:"var(--text-muted)", marginBottom:20 }}>🕵️ Physics & Accountability Data</p>
+                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:20 }}>
+                  <p style={{ fontSize:11, fontWeight:700, textTransform:"uppercase", letterSpacing:"0.1em", color:"var(--text-muted)", margin:0 }}>🕵️ Physics & Accountability Data</p>
+                  <p style={{ fontSize:10, fontWeight:700, textTransform:"uppercase", letterSpacing:"0.05em", color:"#10b981", margin:0, padding:"4px 8px", border:"1px solid rgba(16,185,129,0.3)", borderRadius:6, background:"rgba(16,185,129,0.1)" }}>
+                    Data Source: Simulated Match Report API
+                  </p>
+                </div>
                 <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(200px, 1fr))", gap:16, alignItems:"start" }}>
                   
                   {/* Physics Gauges */}
