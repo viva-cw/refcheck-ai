@@ -415,18 +415,18 @@ export default function Home() {
                     return (
                       <div key={idx} style={{ display:"flex", flexDirection:"column", gap:8, flexShrink:0 }}>
                         <div style={{ 
-                          height:96, width:"auto", minWidth: 120, borderRadius:8, overflow:"hidden", 
+                          height:140, width:"auto", minWidth: 180, borderRadius:8, overflow:"hidden", 
                           border: isFoul ? "2px solid #ef4444" : "1px solid var(--border)", 
                           background:"#000", position:"relative",
-                          boxShadow: isFoul ? "0 0 12px rgba(239,68,68,0.5)" : "none"
+                          boxShadow: isFoul ? "0 0 16px rgba(239,68,68,0.6)" : "none"
                         }}>
                           <img
                             src={`data:image/jpeg;base64,${frame}`}
                             alt={`Frame ${frameNum}`}
-                            style={{ height:"100%", width:"100%", objectFit:"cover", opacity: isFoul ? 1 : 0.6 }}
+                            style={{ height:"100%", width:"100%", objectFit:"contain", opacity: isFoul ? 1 : 0.4 }}
                           />
                           {isFoul && (
-                            <div style={{ position:"absolute", top:4, right:4, background:"#ef4444", color:"#fff", fontSize:8, fontWeight:800, padding:"2px 6px", borderRadius:4, textTransform:"uppercase" }}>
+                            <div style={{ position:"absolute", top:6, right:6, background:"#ef4444", color:"#fff", fontSize:10, fontWeight:800, padding:"4px 8px", borderRadius:4, textTransform:"uppercase", boxShadow:"0 2px 8px rgba(0,0,0,0.5)" }}>
                               Foul Zone
                             </div>
                           )}
