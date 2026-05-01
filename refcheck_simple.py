@@ -227,24 +227,38 @@ def analyze_sequence(client: genai.Client, frame_bytes: list[bytes], referee_nam
     ]
     parts.append(types.Part.from_text(text=USER_PROMPT))
 
-    start_time = time.time()
-    response = client.models.generate_content(
-        model=MODEL_NAME,
-        contents=parts,
-        config=types.GenerateContentConfig(
-            system_instruction=_build_system_prompt(referee_name, referee_data_str),
-            temperature=0.2,
-            max_output_tokens=MAX_OUT_TOKENS,
-            thinking_config=types.ThinkingConfig(
-                thinking_budget=THINKING_BUDGET,
+    try:
+        start_time = time.time()
+        response = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=parts,
+            config=types.GenerateContentConfig(
+                system_instruction=_build_system_prompt(referee_name, referee_data_str),
+                temperature=0.2,
+                max_output_tokens=MAX_OUT_TOKENS,
+                thinking_config=types.ThinkingConfig(
+                    thinking_budget=THINKING_BUDGET,
+                ),
             ),
-        ),
-    )
-    inference_time_seconds = round(time.time() - start_time, 2)
+        )
+        inference_time_seconds = round(time.time() - start_time, 2)
 
-    raw = response.text.strip()
-    log.info("Gemini response received in %.2fs (%d chars).", inference_time_seconds, len(raw))
-    return parse_response(raw, inference_time_seconds)
+        raw = response.text.strip()
+        log.info("Gemini response received in %.2fs (%d chars).", inference_time_seconds, len(raw))
+        return parse_response(raw, inference_time_seconds)
+    except Exception as e:
+        log.error("Error calling Gemini API: %s", e)
+        return {
+            "verdict": "Inconclusive", 
+            "confidence_score": 0,
+            "reasoning": f"Gemini API error: {e}", 
+            "referee_stats": {"historical_bias": "N/A", "accuracy_rating": "N/A"},
+            "foul_frames": [],
+            "detected_entities": [],
+            "rule_alignment_score": 0,
+            "visual_clarity_index": 0,
+            "inference_time_seconds": 0
+        }
 
 
 # ── JSON parsing / validation ───────────────────────────────────────────────

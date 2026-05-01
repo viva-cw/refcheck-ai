@@ -298,6 +298,28 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Original call */}
+            <div>
+              <label htmlFor="original-call-input" style={{ display:"block", fontSize:12, fontWeight:600, textTransform:"uppercase", letterSpacing:"0.08em", color:"var(--text-muted)", marginBottom:8 }}>
+                Original Referee Call <span style={{ fontWeight:400, textTransform:"none", letterSpacing:"normal", color:"var(--text-muted)" }}>(Opt)</span>
+              </label>
+              <input
+                id="original-call-input"
+                type="text"
+                value={originalCall}
+                onChange={e => setOrigCall(e.target.value)}
+                placeholder='e.g. "Yellow card for simulation"'
+                style={{
+                  width:"100%", padding:"11px 14px", borderRadius:10,
+                  background:"rgba(255,255,255,0.04)", border:"1px solid var(--border)",
+                  color:"var(--text-primary)", fontSize:14, outline:"none",
+                  transition:"border-color 0.2s",
+                }}
+                onFocus={e => (e.target.style.borderColor = "rgba(124,106,247,0.5)")}
+                onBlur={e  => (e.target.style.borderColor = "var(--border)")}
+              />
+            </div>
+
             {/* Drop zone */}
             <div>
               <label style={{ display:"block", fontSize:12, fontWeight:600, textTransform:"uppercase", letterSpacing:"0.08em", color:"var(--text-muted)", marginBottom:8 }}>
@@ -392,7 +414,7 @@ export default function Home() {
                 <div style={{ padding:"16px", display:"flex", gap:12, overflowX:"auto" }} className="hide-scrollbar">
                   {result.frames.map((frame, idx) => {
                     const frameNum = idx + 1;
-                    const isFoul = result.foul_frames.includes(frameNum);
+                    const isFoul = result.foul_frames?.includes(frameNum) ?? false;
                     return (
                       <div key={idx} style={{ display:"flex", flexDirection:"column", gap:8, flexShrink:0 }}>
                         <div style={{ 
