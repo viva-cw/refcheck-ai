@@ -110,10 +110,7 @@ export default function Home() {
   const [result, setResult]           = useState<AnalysisResult | null>(null);
 
   useEffect(() => {
-    if (!loading) {
-      setLoadingStep(0);
-      return;
-    }
+    if (!loading) return;
     const timer = setInterval(() => {
       setLoadingStep(s => (s < LOADING_STEPS.length - 1 ? s + 1 : s));
     }, 1500);
@@ -168,7 +165,7 @@ export default function Home() {
   async function handleAnalyze(e: React.FormEvent) {
     e.preventDefault();
     if (!file) return;
-    setLoading(true); setError(null); setResult(null); setChatHist([]);
+    setLoading(true); setLoadingStep(0); setError(null); setResult(null); setChatHist([]);
     const form = new FormData();
     form.append("video", file);
     form.append("sport", sport.toLowerCase());
